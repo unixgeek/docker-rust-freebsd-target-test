@@ -2,6 +2,8 @@
 
 rm -fr hello/target
 
+chmod 777 hello # Meh
+
 docker container run -v "$(pwd)":/mnt --rm -i -t unixgeek2/rust-i586-freebsd \
     /bin/sh -c "cd /mnt/hello && cargo build --release --target i586-unknown-freebsd"
 
